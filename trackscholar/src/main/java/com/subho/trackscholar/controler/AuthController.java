@@ -1,13 +1,17 @@
 package com.subho.trackscholar.controler;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.subho.trackscholar.model.AppUser;
 import com.subho.trackscholar.repo.AppUserRepository;
 import com.subho.trackscholar.service.AppUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -32,8 +36,8 @@ public class AuthController {
     @GetMapping("/me")
     public ResponseEntity<?> getMe(Authentication auth) {
         String email = auth.getName();
-        AppUser user = repo.findByEmail(email).orElseThrow(); // 🟢 Add this
-        return ResponseEntity.ok(user); // Return full user object
+        AppUser user = repo.findByEmail(email).orElseThrow(); 
+        return ResponseEntity.ok(user); 
     }
 
 }

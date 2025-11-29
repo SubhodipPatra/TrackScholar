@@ -1,4 +1,4 @@
-/* General layout */
+
 .app-container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #FFFFFF;
@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-/* Navbar */
+
 .navbar {
   background-color: #223f75;
   color: white;
@@ -17,7 +17,6 @@
   gap: 12px;
 }
 
-/* Nav links */
 .nav-link {
   color: white;
   text-decoration: none;

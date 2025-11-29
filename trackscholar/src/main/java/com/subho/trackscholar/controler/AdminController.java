@@ -1,18 +1,29 @@
 package com.subho.trackscholar.controler;
 
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.subho.trackscholar.model.Classroom;
 import com.subho.trackscholar.model.Student;
 import com.subho.trackscholar.model.Teacher;
 import com.subho.trackscholar.repo.AttendanceRepository;
 import com.subho.trackscholar.repo.MarksRepository;
-import com.subho.trackscholar.service.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
+import com.subho.trackscholar.service.AppUserService;
+import com.subho.trackscholar.service.ClassroomService;
+import com.subho.trackscholar.service.StudentService;
+import com.subho.trackscholar.service.SubjectService;
+import com.subho.trackscholar.service.TeacherService;
 
 @RestController
 @RequestMapping("/admin")
@@ -53,14 +64,7 @@ public class AdminController {
         return ResponseEntity.ok(studentService.register(s, classId));
     }
 
-    //  Assign classroom to teacher
-//    @PostMapping("/teacher/{teacherId}/assign-class/{classId}")
-//    public ResponseEntity<?> assignClass(@PathVariable Long teacherId, @PathVariable Long classId) {
-//        teacherService.assignClassroom(teacherId, classId);
-//        return ResponseEntity.ok("Class assigned successfully");
-//    }
-
-    //  View all classrooms
+    
     @GetMapping("/classrooms")
     public ResponseEntity<?> getAllClassrooms() {
         return ResponseEntity.ok(classroomService.getAll());

@@ -1,6 +1,4 @@
-/* src/styles/AdminForms.css */
 
-/* Container for each form section */
 .admin-form {
   background-color: #FFFFFF;
   padding: 20px;
@@ -9,18 +7,17 @@
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Headings */
+
 .admin-form h3 {
-  color: #1B263B; /* Navy Blue */
+  color: #1B263B; 
   margin-bottom: 15px;
 }
 
-/* Input fields */
 .admin-form input {
   width: calc(100% - 24px);
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #D6D6D6; /* Light grey */
+  border: 1px solid #D6D6D6; 
   border-radius: 6px;
   font-size: 14px;
   background-color: #FFFFFF;

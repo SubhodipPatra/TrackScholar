@@ -5,7 +5,7 @@ export default function MarkAttendance() {
   const [data, setData] = useState({
     studentId: "",
     subjectId: "",
-    status: "P" // "P" or "A"
+    status: "P" 
   });
 
   const mark = async () => {

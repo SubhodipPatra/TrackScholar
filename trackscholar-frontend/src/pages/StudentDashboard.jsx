@@ -32,7 +32,7 @@ export default function StudentDashboard() {
       <h2> Student Dashboard</h2>
       <hr />
 
-      {/* Attendance Table */}
+     
       <div style={{ marginTop: "20px" }}>
         <h3>Attendance Summary</h3>
         {Object.keys(attendance).length === 0 ? (
@@ -62,7 +62,6 @@ export default function StudentDashboard() {
 
       <hr />
 
-      {/* Marks Table */}
       <div style={{ marginTop: "20px" }}>
         <h3>Marks Summary</h3>
         {Object.keys(marks).length === 0 ? (

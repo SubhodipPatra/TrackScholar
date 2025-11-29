@@ -1,12 +1,24 @@
 package com.subho.trackscholar.service;
 
-import com.subho.trackscholar.model.*;
-import com.subho.trackscholar.repo.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import com.subho.trackscholar.model.AppUser;
+import com.subho.trackscholar.model.Attendance;
+import com.subho.trackscholar.model.Classroom;
+import com.subho.trackscholar.model.Marks;
+import com.subho.trackscholar.model.Role;
+import com.subho.trackscholar.model.Student;
+import com.subho.trackscholar.repo.AppUserRepository;
+import com.subho.trackscholar.repo.AttendanceRepository;
+import com.subho.trackscholar.repo.ClassroomRepository;
+import com.subho.trackscholar.repo.MarksRepository;
+import com.subho.trackscholar.repo.StudentRepository;
 
 @Service
 public class StudentService {
@@ -67,9 +79,9 @@ public class StudentService {
 
         return marksList.stream()
                 .collect(Collectors.groupingBy(
-                        m -> m.getSubject().getName(), // Group by subject
+                        m -> m.getSubject().getName(), 
                         Collectors.groupingBy(
-                                Marks::getExamName,       // Then group by exam name
+                                Marks::getExamName,    
                                 Collectors.collectingAndThen(
                                         Collectors.toList(),
                                         list -> {

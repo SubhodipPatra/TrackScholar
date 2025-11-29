@@ -42,10 +42,10 @@ export default function MarksTable() {
         totalMarks: data.totalMarks,
         examType,
       });
-      alert(`✅ Marks uploaded for student ${studentId}`);
+      alert(`Marks uploaded for student ${studentId}`);
     } catch (err) {
       console.error(err);
-      alert("❌ Failed to upload marks");
+      alert("Failed to upload marks");
     }
   };
 

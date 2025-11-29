@@ -1,9 +1,17 @@
 package com.subho.trackscholar.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
-import lombok.*;
 import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
@@ -25,5 +33,5 @@ public class Marks {
     private int totalMarks;
     private LocalDate date;
     @Column(nullable = false)
-    private String examName;// ✅ Add this field
+    private String examName;
 }

@@ -37,7 +37,7 @@ export default function LoginPage() {
       maxWidth: "400px",
       margin: "100px auto",
       padding: "30px",
-      backgroundColor: "#FFFFFF", // White
+      backgroundColor: "#FFFFFF", 
       borderRadius: "12px",
       boxShadow: "0 6px 16px rgba(0,0,0,0.1)",
       color: "#1B263B",
@@ -71,9 +71,9 @@ export default function LoginPage() {
             marginBottom: "15px",
             padding: "10px",
             borderRadius: "8px",
-            border: "1px solid #D6D6D6", // Grey
+            border: "1px solid #D6D6D6", 
             fontSize: "14px",
-            backgroundColor: "#FFFFFF", // White
+            backgroundColor: "#FFFFFF", 
             color: "#1B263B",
           }}
         />
@@ -100,7 +100,7 @@ export default function LoginPage() {
           style={{
             width: "100%",
             padding: "10px",
-            backgroundColor: "#4D96FF", // Sky Blue
+            backgroundColor: "#4D96FF", 
             color: "#FFFFFF",
             fontWeight: "bold",
             border: "none",

@@ -1,8 +1,15 @@
 package com.subho.trackscholar.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
-import lombok.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -10,7 +17,7 @@ import lombok.*;
 @AllArgsConstructor
 public class Student {
     @Id
-    //@GeneratedValue
+
     private Long id;
 
     private String name;

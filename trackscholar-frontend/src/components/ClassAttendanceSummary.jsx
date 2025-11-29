@@ -10,7 +10,7 @@ export default function ClassAttendanceSummary() {
 
   const fetchAttendanceSummary = async () => {
     if (!classId || !subjectId) {
-      setError("⚠️ Please enter both classroom ID and subject ID.");
+      setError("Please enter both classroom ID and subject ID.");
       return;
     }
 
@@ -24,7 +24,7 @@ export default function ClassAttendanceSummary() {
       setSummary(res.data || []);
     } catch (err) {
       console.error(err);
-      setError("❌ Failed to fetch attendance summary.");
+      setError(" Failed to fetch attendance summary.");
     } finally {
       setLoading(false);
     }

@@ -4,7 +4,7 @@ import axios from "../utils/axiosConfig";
 export default function ViewMarksByFilter() {
   const [classId, setClassId] = useState("");
   const [subjectId, setSubjectId] = useState("");
- const [examType, setExamType] = useState(""); // not "FIRST_MIDSEM"
+ const [examType, setExamType] = useState(""); 
 
   const [marks, setMarks] = useState([]);
 

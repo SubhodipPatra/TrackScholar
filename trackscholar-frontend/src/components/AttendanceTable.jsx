@@ -6,7 +6,7 @@ export default function AttendanceTable() {
   const [classId, setClassId] = useState("");
   const [subjectId, setSubjectId] = useState("");
   const [students, setStudents] = useState([]);
-  const [attendanceStatus, setAttendanceStatus] = useState({}); // { studentId: 'P' | 'A' }
+  const [attendanceStatus, setAttendanceStatus] = useState({});
 
   const fetchStudents = async () => {
     try {
@@ -14,7 +14,7 @@ export default function AttendanceTable() {
       setStudents(res.data);
       const defaultStatus = {};
       res.data.forEach((s) => {
-        defaultStatus[s.id] = "A"; // initially everyone is Absent
+        defaultStatus[s.id] = "A"; 
       });
       setAttendanceStatus(defaultStatus);
     } catch (err) {

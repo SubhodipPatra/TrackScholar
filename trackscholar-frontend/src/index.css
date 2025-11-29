@@ -1,0 +1,103 @@
+/* src/styles/global.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFFFFF; /* Clean white background */
+  color: #1B263B; /* Navy Blue */
+}
+
+h1, h2, h3 {
+  color: #1B263B; /* Navy Blue */
+}
+
+.dashboard {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  background-color: #4D96FF; /* Sky Blue */
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3a78d3;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.03);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #D6D6D6;
+  text-align: left;
+}
+
+th {
+  background-color: #4D96FF; /* Sky Blue */
+  color: white;
+}
+
+/* Form inputs */
+input, select, textarea {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #D6D6D6;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #1B263B;
+}
+
+/* Highlighted success (optional use) */
+.success-highlight {
+  background-color: #2ECC71;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

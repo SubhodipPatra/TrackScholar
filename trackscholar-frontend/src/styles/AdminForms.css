@@ -1,0 +1,56 @@
+/* src/styles/AdminForms.css */
+
+/* Container for each form section */
+.admin-form {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.admin-form h3 {
+  color: #1B263B; /* Navy Blue */
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.admin-form input {
+  width: calc(100% - 24px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #D6D6D6; /* Light grey */
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  color: #1B263B;
+}
+
+/* Button */
+.admin-form button {
+  background-color: #4D96FF; /* Sky Blue */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-form button:hover {
+  background-color: #3a78d3;
+}
+
+/* Optional: Two-column form inputs (for larger forms) */
+.admin-form .row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-form .row input {
+  flex: 1;
+}

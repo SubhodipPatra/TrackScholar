@@ -1,0 +1,30 @@
+
+services:
+        postgres:
+                image: postgres:latest
+                environment:
+                        POSTGRES_DB: trackscholar
+                        POSTGRES_USER: postgres
+                        POSTGRES_PASSWORD: 1234
+                ports:
+                        - "5433:5432"
+                networks:
+                        - bridge
+                volumes:
+                        - postgres_data:/var/lib/postgresql/data
+
+        backend:
+                build: .
+                ports:
+                        - "8080:8080"
+
+                networks:
+                        - bridge
+
+networks:
+        bridge:
+                driver: bridge
+
+
+volumes:
+        postgres_data:
